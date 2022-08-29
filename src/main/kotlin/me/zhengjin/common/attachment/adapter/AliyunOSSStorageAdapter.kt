@@ -1,15 +1,15 @@
 package me.zhengjin.common.attachment.adapter
 
-import me.zhengjin.common.attachment.autoconfig.AttachmentAliyunOSStorageProperties
-import me.zhengjin.common.attachment.controller.vo.AttachmentVO
-import me.zhengjin.common.attachment.po.Attachment
-import me.zhengjin.common.attachment.po.AttachmentModelHelper
-import me.zhengjin.common.attachment.repository.AttachmentRepository
 import cn.hutool.core.io.file.FileNameUtil
 import cn.hutool.core.util.RandomUtil
 import com.aliyun.oss.HttpMethod
 import com.aliyun.oss.OSS
 import com.aliyun.oss.model.ObjectMetadata
+import me.zhengjin.common.attachment.autoconfig.AttachmentAliyunOSStorageProperties
+import me.zhengjin.common.attachment.controller.vo.AttachmentVO
+import me.zhengjin.common.attachment.po.Attachment
+import me.zhengjin.common.attachment.po.AttachmentModelHelper
+import me.zhengjin.common.attachment.repository.AttachmentRepository
 import java.io.InputStream
 import java.time.Instant
 import java.time.temporal.ChronoUnit

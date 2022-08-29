@@ -1,9 +1,9 @@
 package me.zhengjin.common.attachment.autoconfig
 
+import com.aliyun.oss.OSS
 import me.zhengjin.common.attachment.adapter.AliyunOSSStorageAdapter
 import me.zhengjin.common.attachment.adapter.AttachmentStorage
 import me.zhengjin.common.attachment.repository.AttachmentRepository
-import com.aliyun.oss.OSS
 import org.slf4j.LoggerFactory
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
