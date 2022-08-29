@@ -1,0 +1,41 @@
+{
+  "groups": [
+    {
+      "name": "customize.common.storage.aliyun-oss",
+      "type": "me.zhengjin.common.attachment.autoconfig.AttachmentAliyunOSStorageProperties",
+      "sourceType": "me.zhengjin.common.attachment.autoconfig.AttachmentAliyunOSStorageProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "customize.common.storage.type",
+      "type": "java.lang.String",
+      "description": "attachment storage type.",
+      "defaultValue": "aliyun-oss"
+    },
+    {
+      "name": "customize.common.storage.aliyun-oss.bucket",
+      "type": "java.lang.String",
+      "description": "aliyun-oss bucket",
+      "sourceType": "me.zhengjin.common.attachment.autoconfig.AttachmentAliyunOSStorageProperties"
+    },
+    {
+      "name": "customize.common.storage.aliyun-oss.endpoint",
+      "type": "java.lang.String",
+      "description": "aliyun-oss endpoint",
+      "sourceType": "me.zhengjin.common.attachment.autoconfig.AttachmentAliyunOSStorageProperties"
+    },
+    {
+      "name": "customize.common.storage.aliyun-oss.accessKey",
+      "type": "java.lang.String",
+      "description": "aliyun-oss accessKey",
+      "sourceType": "me.zhengjin.common.attachment.autoconfig.AttachmentAliyunOSStorageProperties"
+    },
+    {
+      "name": "customize.common.storage.aliyun-oss.secretKey",
+      "type": "java.lang.String",
+      "description": "aliyun-oss secretKey",
+      "sourceType": "me.zhengjin.common.attachment.autoconfig.AttachmentAliyunOSStorageProperties"
+    }
+  ]
+}
