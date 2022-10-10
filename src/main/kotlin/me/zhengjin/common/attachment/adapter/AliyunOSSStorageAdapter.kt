@@ -21,7 +21,7 @@ open class AliyunOSSStorageAdapter(
     private val aliyunOSSClient: OSS
 ) : AttachmentStorageAdapter(attachmentRepository) {
 
-    override fun share(attachmentId: String): String {
+    override fun share(attachmentId: Long): String {
         return aliyunOSSClient.generatePresignedUrl(
             attachmentAliyunOSStorageProperties.bucket,
             getAttachment(attachmentId).filePath,
@@ -56,7 +56,7 @@ open class AliyunOSSStorageAdapter(
         module: String,
         businessTypeCode: String,
         businessTypeName: String,
-        pkId: String?,
+        pkId: Long?,
         originalFileName: String,
         fileContentType: String,
         fileSize: Long,
@@ -86,13 +86,13 @@ open class AliyunOSSStorageAdapter(
         attachment.module = module
         attachment.businessTypeCode = if (readOnly) "${businessTypeCode}_ReadOnly" else businessTypeCode
         attachment.businessTypeName = if (readOnly) "$businessTypeName(预览)" else businessTypeName
-        attachment.pkId = if (pkId.isNullOrBlank()) null else pkId.toString()
+        attachment.pkId = pkId
         attachment.fileOriginName = fileName
         attachment.fileType = fileContentType
         attachment.filePath = storagePath
         attachment.fileSize = fileSize.toString()
         attachment = attachmentRepository.save(attachment)
-        return if (!attachment.id.isNullOrBlank()) {
+        return if (attachment.id != null) {
             AttachmentVO.transform(attachment)
         } else {
             throw RuntimeException("file save failed!")
